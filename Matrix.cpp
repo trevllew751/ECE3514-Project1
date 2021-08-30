@@ -14,22 +14,22 @@ Matrix::Matrix() {
 }
 
 Matrix::Matrix(const std::vector<int> &A, unsigned int n) {
-    if (n <= 0) {
-        m = 0;
+    if ((n * n) != A.size()) {
+        this->m = 0;
         this->n = 0;
     } else {
-        m = n;
+        this->m = n;
         this->n = n;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                this->A.push_back(A.at(j));
+                this->A.push_back(A.at((i * m) + j));
             }
         }
     }
 }
 
 Matrix::Matrix(const std::vector<int> &A, unsigned int m, unsigned int n) {
-    if (n <= 0 || m <= 0) {
+    if ((m * n) != A.size()) {
         this->m = 0;
         this->n = 0;
     } else {
@@ -37,7 +37,7 @@ Matrix::Matrix(const std::vector<int> &A, unsigned int m, unsigned int n) {
         this->n = n;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                this->A.push_back(A.at(j));
+                this->A.push_back(A.at((i * m) + j));
             }
         }
     }
@@ -108,8 +108,8 @@ const Matrix Matrix::mult(const Matrix &rhs) const {
 }
 
 const Matrix Matrix::mult(int c) const {
-    std::vector<int> vec = A;
-    for (int & i : vec) {
+    std::vector<int> vec(A);
+    for (int &i : vec) {
         i *= c;
     }
     return Matrix(vec, m, n);
