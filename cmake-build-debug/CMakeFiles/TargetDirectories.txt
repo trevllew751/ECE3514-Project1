@@ -1,0 +1,5 @@
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/cmake-build-debug/CMakeFiles/student-tests.dir
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/cmake-build-debug/CMakeFiles/submission.dir
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/cmake-build-debug/CMakeFiles/test.dir
