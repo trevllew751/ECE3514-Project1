@@ -1,4 +1,5 @@
 #include "Matrix.hpp"
+#include <cmath>
 
 void Matrix::output(std::ostream &out) const {
     for (int i = 0; i < A.size(); i++)
@@ -136,13 +137,23 @@ const Matrix Matrix::mult(int c) const {
     for (int &i : vec) {
         i *= c;
     }
-    return Matrix(vec, m, n);
+    return Matrix(vec, this->m, this->n);
 }
 
 const Matrix Matrix::pow(unsigned int n) const {
-    return Matrix();
+    std::vector<int> vect(A);
+    for(int &i : vect) {
+        i = (int)std::pow(i, n);
+    }
+    return Matrix(vect, this->m, this->n);
 }
 
-const Matrix Matrix::trans(const Matrix &rhs) const {
-    return Matrix();
+const Matrix Matrix::trans(/*const Matrix &rhs*/) const {
+    std::vector<int> vect(this->m * this->n, 0);
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            vect.at(i + (j * n)) = A.at(j + (i * m));
+        }
+    }
+    return Matrix(vect, this->n, this->m);
 }

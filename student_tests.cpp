@@ -127,3 +127,23 @@ TEST_CASE("mult method", "[Matrix]") {
     REQUIRE(A.mult(D).size(1) == 0);
     REQUIRE(A.mult(D).size(2) == 0);
 }
+
+TEST_CASE("pow method", "[Matrix]") {
+    std::vector<int> vect(4, 2);
+    std::vector<int> vect1(4, 4);
+    std::vector<int> vect2(4, 8);
+    Matrix A(vect, 2, 2);
+    Matrix B(vect1, 2, 2);
+    Matrix C(vect2, 2, 2);
+    REQUIRE(A.pow(2).equal(B));
+}
+
+TEST_CASE("trans method", "[Matrix]") {
+    std::vector<int> vect{1, 2, 3, 4, 5, 6};
+    std::vector<int> vect1{1, 4, 2, 5, 3, 6};
+    Matrix A(vect, 3, 2);
+    Matrix B(vect1, 2, 3);
+    Matrix C;
+    REQUIRE(A.trans().equal(B));
+    REQUIRE(C.trans().equal(Matrix()));
+}
