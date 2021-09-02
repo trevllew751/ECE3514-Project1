@@ -22,9 +22,9 @@ Matrix::Matrix(const std::vector<int> &A, unsigned int n) {
     } else {
         this->m = n;
         this->n = n;
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                this->A.push_back(A.at((i * n) + j));
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                this->A.push_back(A.at((i * m) + j));
             }
         }
     }
@@ -37,9 +37,9 @@ Matrix::Matrix(const std::vector<int> &A, unsigned int m, unsigned int n) {
     } else {
         this->m = m;
         this->n = n;
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                this->A.push_back(A.at((i * n) + j));
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                this->A.push_back(A.at((i * m) + j));
             }
         }
     }

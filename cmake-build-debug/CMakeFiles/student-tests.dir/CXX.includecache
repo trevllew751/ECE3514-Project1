@@ -6,19 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project1/ECE3514-Project1/Matrix.cpp
-Matrix.hpp
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project1/ECE3514-Project1/Matrix.hpp
-cmath
--
-
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project1/ECE3514-Project1/Matrix.hpp
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/Matrix.hpp
 iostream
 -
 vector
 -
 
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project1/ECE3514-Project1/catch.hpp
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/catch.hpp
 TargetConditionals.h
 -
 cstddef
@@ -400,7 +394,7 @@ string
 memory
 -
 Foundation/Foundation.h
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project1/ECE3514-Project1/Foundation/Foundation.h
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/Foundation/Foundation.h
 algorithm
 -
 signal.h
@@ -612,9 +606,11 @@ iomanip
 cassert
 -
 
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project1/ECE3514-Project1/student_tests.cpp
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/student_tests.cpp
 catch.hpp
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project1/ECE3514-Project1/catch.hpp
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/catch.hpp
 Matrix.hpp
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project1/ECE3514-Project1/Matrix.hpp
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/Matrix.hpp
+climits
+-
 

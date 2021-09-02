@@ -1,4 +1,4 @@
-C:\Users\Trevl\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\211.7442.42\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" "C:\Users\Trevl\Desktop\Projects\School\ECE 3514 - Data Structures and Algorithms\Project1\ECE3514-Project1"
+C:\Users\Trevl\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\211.7442.42\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" "C:\Users\Trevl\Desktop\Projects\School\ECE 3514  - Data Structures and Algorithms\Project 1\P1_1"
 -- The CXX compiler identification is MSVC 19.29.30038.1
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
@@ -7,4 +7,4 @@ C:\Users\Trevl\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\211.7442.42\bin\c
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project1/ECE3514-Project1/cmake-build-debug
+-- Build files have been written to: C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/cmake-build-debug

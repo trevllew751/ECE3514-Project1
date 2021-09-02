@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project1/ECE3514-Project1/Matrix.cpp" "C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project1/ECE3514-Project1/cmake-build-debug/CMakeFiles/student-tests.dir/Matrix.cpp.obj"
-  "C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project1/ECE3514-Project1/student_catch.cpp" "C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project1/ECE3514-Project1/cmake-build-debug/CMakeFiles/student-tests.dir/student_catch.cpp.obj"
-  "C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project1/ECE3514-Project1/student_tests.cpp" "C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project1/ECE3514-Project1/cmake-build-debug/CMakeFiles/student-tests.dir/student_tests.cpp.obj"
+  "C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/Matrix.cpp" "C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/cmake-build-debug/CMakeFiles/student-tests.dir/Matrix.cpp.obj"
+  "C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/student_catch.cpp" "C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/cmake-build-debug/CMakeFiles/student-tests.dir/student_catch.cpp.obj"
+  "C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/student_tests.cpp" "C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project 1/P1_1/cmake-build-debug/CMakeFiles/student-tests.dir/student_tests.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

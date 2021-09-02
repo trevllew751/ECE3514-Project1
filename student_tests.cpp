@@ -92,8 +92,8 @@ TEST_CASE("equals method", "[Matrix]") {
 
 TEST_CASE("add method", "[Matrix]") {
     std::vector<int> vect{1, 2, 3, 4, 5, 6};
-    std::vector<int> vect1{6, 5, 4, 3, 2, 1};
-    std::vector<int> vect2{7, 7, 7, 7, 7, 7};
+    std::vector<int> vect1{1, 1, 1, 1, 1, 1};
+    std::vector<int> vect2{2, 3, 4, 5, 6, 7};
     Matrix A(vect, 3, 2);
     Matrix B(vect1, 3, 2);
     Matrix C(vect2, 3, 2);
