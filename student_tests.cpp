@@ -17,14 +17,21 @@ TEST_CASE("default constructor", "[Matrix]")
 }
 
 TEST_CASE("parameterized constructor (vector, n)", "[Matrix]") {
-    std::vector<int> vect{1, 2, 3, 4};
+    std::vector<int> vect{1, 2, 3, 4, 5, 6};
     Matrix A(vect, 2);
     REQUIRE(A.get(0) == 1);
     REQUIRE(A.get(1) == 2);
     REQUIRE(A.get(2) == 3);
     REQUIRE(A.get(3) == 4);
+    REQUIRE(A.get(4) == 5);
+    REQUIRE(A.get(5) == 6);
 
-    REQUIRE(A.size(1) == 2);
+    std::vector<int> vect1{1,2,3};
+    Matrix B(vect, 4);
+    REQUIRE(B.size(1) == 0);
+    REQUIRE(B.size(2) == 0);
+
+    REQUIRE(A.size(1) == 3);
     REQUIRE(A.size(2) == 2);
     REQUIRE(A.get(100) == INT_MIN);
 }
@@ -129,14 +136,26 @@ TEST_CASE("mult method", "[Matrix]") {
     REQUIRE(A.mult(D).size(2) == 0);
 }
 
+TEST_CASE("mult method scalar", "[Matrix]") {
+    std::vector<int> vect{1, 2, 3, 4, 5, 6};
+    std::vector<int> vect1{2, 4, 6, 8, 10, 12};
+    Matrix A(vect, 3, 2);
+    Matrix B(vect1, 3, 2);
+    REQUIRE(A.mult(2).equal(B));
+}
+
 TEST_CASE("pow method", "[Matrix]") {
     std::vector<int> vect(4, 2);
     std::vector<int> vect1(4, 4);
     std::vector<int> vect2(4, 8);
+    std::vector<int> vect3(4, 1);
     Matrix A(vect, 2, 2);
     Matrix B(vect1, 2, 2);
     Matrix C(vect2, 2, 2);
+    Matrix D(vect3, 2, 2);
     REQUIRE(A.pow(2).equal(B));
+    REQUIRE(A.pow(3).equal(C));
+    REQUIRE(A.pow(0).equal(D));
 }
 
 TEST_CASE("trans method", "[Matrix]") {

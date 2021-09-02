@@ -16,11 +16,11 @@ Matrix::Matrix() {
 }
 
 Matrix::Matrix(const std::vector<int> &A, unsigned int n) {
-    if ((n * n) != A.size()) {
+    if (n == 0 || A.size() % n != 0) {
         this->m = 0;
         this->n = 0;
     } else {
-        this->m = n;
+        this->m = A.size() / n;
         this->n = n;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
@@ -132,6 +132,15 @@ const Matrix Matrix::mult(const Matrix &rhs) const {
     }
     return Matrix(vect, this->m, this->n);
 }
+
+//const Matrix Matrix::mult(const Matrix &rhs) const {
+//    if (this->n != rhs.m) {
+//        // purposefully invalid matrix to return a 0 matrix
+//        return Matrix(std::vector<int>(1, 1), 2, 2);
+//    }
+//    std::vector<int> vect(A);
+//
+//}
 
 const Matrix Matrix::mult(int c) const {
     std::vector<int> vec(A);
