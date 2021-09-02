@@ -39,8 +39,8 @@ TEST_CASE("parameterized constructor (vector, m, n)", "[Matrix]") {
     REQUIRE(A.get(4) == 5);
     REQUIRE(A.get(5) == 6);
 
-    REQUIRE(A.size(1) == 2);
-    REQUIRE(A.size(2) == 3);
+    REQUIRE(A.size(1) == 3);
+    REQUIRE(A.size(2) == 2);
     REQUIRE(A.get(100) == INT_MIN);
 }
 

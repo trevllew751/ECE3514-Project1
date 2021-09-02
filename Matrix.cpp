@@ -77,10 +77,10 @@ bool Matrix::set(unsigned int i, unsigned int j, int aij) {
 
 unsigned int Matrix::size(unsigned int dim) const {
     if (dim == 1) {
-        return n;
+        return m;
     }
     if (dim == 2) {
-        return m;
+        return n;
     }
     return 0;
 }
