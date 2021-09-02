@@ -1,5 +1,6 @@
 #include "catch.hpp"
 #include "Matrix.hpp"
+#include <climits>
 
 TEST_CASE("default constructor", "[Matrix]")
 {

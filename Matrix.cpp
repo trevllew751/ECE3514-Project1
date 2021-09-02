@@ -1,5 +1,6 @@
 #include "Matrix.hpp"
 #include <cmath>
+#include <climits>
 
 void Matrix::output(std::ostream &out) const {
     for (int i = 0; i < A.size(); i++)
