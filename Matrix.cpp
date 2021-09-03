@@ -99,8 +99,7 @@ bool Matrix::equal(const Matrix &rhs) const {
 
 const Matrix Matrix::add(const Matrix &rhs) const {
     if (rhs.m != this->m || rhs.n != this->n) {
-        // purposefully invalid matrix to return a 0 matrix
-        return Matrix(std::vector<int>(1, 1), 2, 2);
+        return Matrix(std::vector<int>(), 0, 0);
     }
     std::vector<int> vect(A);
     for (int i = 0; i < A.size(); i++) {
@@ -111,8 +110,7 @@ const Matrix Matrix::add(const Matrix &rhs) const {
 
 const Matrix Matrix::sub(const Matrix &rhs) const {
     if (rhs.m != this->m || rhs.n != this->n) {
-        // purposefully invalid matrix to return a 0 matrix
-        return Matrix(std::vector<int>(1, 1), 2, 2);
+        return Matrix(std::vector<int>(), 0, 0);
     }
     std::vector<int> vect(A);
     for (int i = 0; i < A.size(); i++) {
@@ -121,37 +119,23 @@ const Matrix Matrix::sub(const Matrix &rhs) const {
     return Matrix(vect, this->m, this->n);
 }
 
-//const Matrix Matrix::mult(const Matrix &rhs) const {
-//    if (rhs.m != this->m || rhs.n != this->n) {
-//        // purposefully invalid matrix to return a 0 matrix
-//        return Matrix(std::vector<int>(1, 1), 2, 2);
-//    }
-//    std::vector<int> vect(A);
-//    for (int i = 0; i < A.size(); i++) {
-//        vect.at(i) *= rhs.A.at(i);
-//    }
-//    return Matrix(vect, this->m, this->n);
-//}
-
 const Matrix Matrix::mult(const Matrix &rhs) const {
     if (this->n != rhs.m) {
-        // purposefully invalid matrix to return a 0 matrix
-        return Matrix(std::vector<int>(1, 1), 2, 2);
+        return Matrix(std::vector<int>(), 0, 0);
     }
     Matrix result(std::vector<int>(this->m * rhs.n, 0), this->m, rhs.n);
-    int row = 0;
-    int col = 0;
-    for (int i = 0; i < result.n; i++) {
-        for (int j = 0; j < result.m; j++) {
-            int val = 0;
-            int l = 0;
-            for (int v = row; v < A.size(); v += result.m) {
-                val += rhs.get(l) * A.at(v);
-                l++;
+    Matrix matrix(A, m, n);
+    int val = 0;
+    for (int i = 0; i < this->m; i++) {
+        for (int j = 0; j < rhs.n; j++) {
+            for (int k = 0; k < rhs.m; k++) {
+                val += rhs.get(k, j) * matrix.get(i, k);
             }
-            result.set(row, col, val);
+            result.set(i, j, val);
+            val = 0;
         }
     }
+    return result;
 }
 
 const Matrix Matrix::mult(int c) const {
@@ -162,23 +146,14 @@ const Matrix Matrix::mult(int c) const {
     return Matrix(vec, this->m, this->n);
 }
 
-//const Matrix Matrix::pow(unsigned int n) const {
-//    std::vector<int> vect(A);
-//    for(int &i : vect) {
-//        i = (int)std::pow(i, n);
-//    }
-//    return Matrix(vect, this->m, this->n);
-//}
-
 const Matrix Matrix::pow(unsigned int n) const {
     if (n == 0) {
         return Matrix(std::vector<int>(this->m * this->n, 1), this->m, this->n);
     }
-    std::vector<int> vect(A);
-    Matrix m(vect, this->m, this->n);
-    Matrix result(vect, this->m, this->n);
-    for (int i = 0; i < n; i++) {
-        result = result.mult(m);
+    Matrix matrix(A, this->m, this->n);
+    Matrix result(A, this->m, this->n);
+    for (int i = 0; i < n - 1; i++) {
+        result = result.mult(matrix);
     }
     return result;
 }
