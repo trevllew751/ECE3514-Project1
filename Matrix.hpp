@@ -114,7 +114,7 @@ public:
      * Creates and returns a new Matrix object that is the transpose of this.
      * @return a new Matrix object that is the transpose of this object.
      */
-    const Matrix trans(/*const Matrix &rhs*/) const;
+    const Matrix trans() const;
 
     /**
      * Outputs this Matrix object on the given ostream (for debugging).

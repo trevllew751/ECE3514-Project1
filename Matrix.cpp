@@ -147,18 +147,21 @@ const Matrix Matrix::mult(int c) const {
 }
 
 const Matrix Matrix::pow(unsigned int n) const {
+    if (this->n != this->m) {
+        return Matrix(std::vector<int>(), 0, 0);
+    }
     if (n == 0) {
         return Matrix(std::vector<int>(this->m * this->n, 1), this->m, this->n);
     }
     Matrix matrix(A, this->m, this->n);
     Matrix result(A, this->m, this->n);
     for (int i = 0; i < n - 1; i++) {
-        result = result.mult(matrix);
+        result = result.mult(result);
     }
     return result;
 }
 
-const Matrix Matrix::trans(/*const Matrix &rhs*/) const {
+const Matrix Matrix::trans() const {
     std::vector<int> vect(this->m * this->n, 0);
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
