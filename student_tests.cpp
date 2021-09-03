@@ -145,7 +145,7 @@ TEST_CASE("pow method", "[Matrix]") {
     std::vector<int> vect{1, 2, 3, 4, 5, 6, 7, 8, 9};
     std::vector<int> vect1{468, 576, 684, 1062, 1305, 1548, 1656, 2034, 2412};
     std::vector<int> vect2{30, 36, 42, 66, 81, 96, 102, 126, 150};
-    std::vector<int> vect3(9, 1);
+    std::vector<int> vect3{1, 0, 0, 0, 1, 0, 0, 0, 1};
     std::vector<int> vect4(6, 2);
     Matrix A(vect, 3, 3);
     Matrix B(vect1, 3, 3);
@@ -155,6 +155,7 @@ TEST_CASE("pow method", "[Matrix]") {
     REQUIRE(A.pow(3).equal(B));
     REQUIRE(A.pow(2).equal(C));
     REQUIRE(A.pow(0).equal(D));
+    REQUIRE(A.pow(1).equal(A));
     REQUIRE(E.pow(2).equal(Matrix(std::vector<int>(), 0, 0)));
 }
 

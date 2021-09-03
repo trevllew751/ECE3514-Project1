@@ -151,12 +151,16 @@ const Matrix Matrix::pow(unsigned int n) const {
         return Matrix(std::vector<int>(), 0, 0);
     }
     if (n == 0) {
-        return Matrix(std::vector<int>(this->m * this->n, 1), this->m, this->n);
+        Matrix result(std::vector<int>(this->m * this->n, 0), this->m, this->n);
+        for (int i = 0; i < this->n; i++) {
+            result.set(i, i, 1);
+        }
+        return result;
     }
     Matrix matrix(A, this->m, this->n);
     Matrix result(A, this->m, this->n);
     for (int i = 0; i < n - 1; i++) {
-        result = result.mult(result);
+        result = result.mult(matrix);
     }
     return result;
 }
