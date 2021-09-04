@@ -1,5 +1,4 @@
 #include "Matrix.hpp"
-#include <cmath>
 #include <climits>
 
 void Matrix::output(std::ostream &out) const {
